@@ -1,6 +1,0 @@
-# Ignore everything in this directory
-*
-# Except Me
-!.gitignore
-
-# Run 'git submodule init' to populate this folder :)
