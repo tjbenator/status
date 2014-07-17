@@ -2,9 +2,11 @@
 <html>
 	<head>
 		<title>Status</title>
+		<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.15/angular.min.js"></script>
 		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="lib/peity/jquery.peity.min.js"></script>
+		<script src="js/controllers.js"></script>
 	</head>
 	<script>
 		$.fn.peity.defaults.pie = {

@@ -1,6 +1,6 @@
 <?php
 set_include_path(dirname(__FILE__));
-include "config.php";
+include 'config.php';
 
 $dbo = new PDO(DBDRIVER . ":host=" . DBHOSTNAME . ";dbname=" . DBNAME, DBUSERNAME, DBPASSWORD);
 
