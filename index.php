@@ -9,15 +9,40 @@ include $header;
 
 			<div ng-show="server.description" class="well well-sm">{{server.description}}</div>
 
-			<table ng-show="server.services" class="table table-striped table-bordered table-hover">
-				<tr>
-					<th>Service Name</th>
-					<th>Status</th>
-				</tr>
-				<tr ng-repeat="service in server.services">
-					<td>{{service.name}}</td>
-					<td><button type="button" class="btn btn-default">{{service.status}}</button></td>
-				</tr>
+			<table ng-show="server.applications" class="table table-striped table-bordered table-hover table-condensed">
+				<thead>
+					<tr>
+						<th>Application Name</th>
+						<th>Status</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="application in server.applications">
+						<td>{{application.name}}</td>
+						<td>
+							<button type="button" ng-hide="application.status" class="btn btn-danger">{{application.status}}</button>
+							<button type="button" ng-show="application.status" class="btn btn-success">{{application.status}}</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table ng-show="server.services" class="table table-striped table-bordered table-hover table-condensed">
+				<thead>
+					<tr>
+						<th>Service Name</th>
+						<th>Status</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="service in server.services">
+						<td>{{service.name}}</td>
+						<td>
+							<button type="button" ng-hide="service.status" class="btn btn-danger">{{service.status}}</button>
+							<button type="button" ng-show="service.status" class="btn btn-success">{{service.status}}</button>
+						</td>
+					</tr>
+				</tbody>
 			</table>
 
 		</div>
